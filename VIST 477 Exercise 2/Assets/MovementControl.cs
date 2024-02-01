@@ -83,11 +83,23 @@ public class MovementControl : MonoBehaviour
     private void UpdateScoreText()
     {
         score += 10;
-        if (textMeshPro != null)
+        textMeshPro.text = "Score: " + score;
+        if (score >=30)
         {
-            textMeshPro.text = "Score: " + score;
+            textMeshPro.text = "Victory";
+            StartCoroutine(DelayBeforeReset(2f));
         }
     }
+
+    private IEnumerator DelayBeforeReset(float seconds)
+    {
+        // Pause for the specified number of seconds
+        yield return new WaitForSeconds(seconds);
+
+        // After the delay, reset the game
+        ResetGame();
+    }
+
 
     bool IsGrounded()
     {
