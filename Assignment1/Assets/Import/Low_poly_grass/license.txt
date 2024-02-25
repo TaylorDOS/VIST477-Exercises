@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low poly grass
+* source:	https://sketchfab.com/3d-models/low-poly-grass-725702a76d5048b0bc75f2d72e61b2a2
+* author:	Lupu Marius (https://sketchfab.com/lupumarius)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low poly grass" (https://sketchfab.com/3d-models/low-poly-grass-725702a76d5048b0bc75f2d72e61b2a2) by Lupu Marius (https://sketchfab.com/lupumarius) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

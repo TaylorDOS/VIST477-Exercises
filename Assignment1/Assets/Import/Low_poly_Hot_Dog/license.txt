@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low poly Hot Dog
+* source:	https://sketchfab.com/3d-models/low-poly-hot-dog-d42fc674c23d44679d14aa02a60317e7
+* author:	oksanaArthouse (https://sketchfab.com/oksanaArthouse)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low poly Hot Dog" (https://sketchfab.com/3d-models/low-poly-hot-dog-d42fc674c23d44679d14aa02a60317e7) by oksanaArthouse (https://sketchfab.com/oksanaArthouse) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

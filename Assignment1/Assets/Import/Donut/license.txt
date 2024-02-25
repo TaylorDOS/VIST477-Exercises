@@ -1,0 +1,11 @@
+Model Information:
+* title:	Donut
+* source:	https://sketchfab.com/3d-models/donut-ca5fa56d6c3b4769966a2bb3581ff22d
+* author:	BossBelt4579158 (https://sketchfab.com/BossBelt4579158)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Donut" (https://sketchfab.com/3d-models/donut-ca5fa56d6c3b4769966a2bb3581ff22d) by BossBelt4579158 (https://sketchfab.com/BossBelt4579158) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
