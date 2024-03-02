@@ -40,6 +40,11 @@ MonoBehaviour:
   - Fire
   - RespawnSpaceship
   - changeMaterial
+  - Counter
+  - AddToCount
+  - InitializeCount
+  - ApplyRepulsorForceRPC
+  - SetPlayerRole
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

@@ -23,6 +23,18 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
     }
 
+
+    // void Update()
+    // {
+    //     foreach (Player player in PhotonNetwork.PlayerList)
+    // {
+    //     if (!player.IsLocal)
+    //     {
+    //         player.tag = "Runner";
+    //     }
+    // }
+    // }
+
     private void ConnectedtoServer()
     {
         PhotonNetwork.ConnectUsingSettings();

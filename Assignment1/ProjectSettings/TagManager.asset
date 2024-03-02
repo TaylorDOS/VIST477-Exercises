@@ -7,6 +7,11 @@ TagManager:
   - Planet
   - Prop
   - Cylinder
+  - Tagger
+  - Runner
+  - Boost
+  - Teleportation
+  - Repulsor
   layers:
   - Default
   - TransparentFX
