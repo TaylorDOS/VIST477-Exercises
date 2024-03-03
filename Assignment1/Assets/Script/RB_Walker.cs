@@ -13,13 +13,14 @@ public class RB_Walker : MonoBehaviour
     public Camera playerCamera;
     public float speed = 20.0f;
     public GameObject hmdUI;
+    public GameObject map;
     private InputData inputData;
     private TaggingMechanism updateUI;
     private PhotonView myView;
     private Rigidbody r;
     private float originalSpeed;
-    private bool isBoosted = false;
-    private float totalBoostTime = 0.0f;
+    private bool isBoosted = false, RadarOn = false;
+    private float totalBoostTime = 0.0f, RadarTime = 0.0f;
     private float elapsedTime = 0.0f;
     private int teleportCredits = 0;
     private Vector2 rotation = Vector2.zero;
@@ -177,7 +178,59 @@ public class RB_Walker : MonoBehaviour
             updateUI.UpdatePowerUpUI("Repulsor");
             Destroy(collision.gameObject);
         }
+        else if (collision.gameObject.CompareTag("Radar"))
+        {
+            
+              
+                
+            
+             if (!RadarOn)
+            {
+                RadarTime= 10.0f;
+                // Increase speed when colliding with a boost power-up
+                StartCoroutine(RadarTimer(RadarTime));
+                updateUI.UpdatePowerUpUI("Radar");
+               
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                RadarTime = 10.0f;
+                
+                Destroy(collision.gameObject);
+            }
+            
+            Debug.Log("Radar Power-Up Obtained!");
+            
+            
+
+            Destroy(collision.gameObject);
+        }
     }
+
+    IEnumerator RadarTimer(float duration)
+    {
+        RadarOn = true;
+        float Rtime = duration;
+       
+    
+        map.SetActive(true);
+        while (Rtime>0)
+        {
+            // Check for collisions during the boost duration
+            yield return null;
+            Rtime -= Time.deltaTime;
+            
+        }
+
+        // Reset speed and flags when the boost duration is over
+        map.SetActive(false);
+         RadarOn = false;
+        RadarTime = 0.0f; // Reset total boost time
+        updateUI.UpdatePowerUpUI("Radar Ended");
+           
+    }
+
 
     void CollectRepulsorPowerUp()
     {

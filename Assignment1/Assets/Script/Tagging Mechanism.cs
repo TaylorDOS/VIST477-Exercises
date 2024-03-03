@@ -15,7 +15,7 @@ public class TaggingMechanism : MonoBehaviourPunCallbacks
     private Text HMDPowerUpText;
     private Text HMDTimerText;
     private GameObject[] HMDHealthIcon;
-    private float totalTime = 10f;
+    private float totalTime = 120f;
     private float  timeLeft;
     private int heart = 3;
     private int nextToDeactivateIndex = 0;
@@ -98,7 +98,21 @@ public class TaggingMechanism : MonoBehaviourPunCallbacks
             //timerStarted = true;
             //Debug.Log("player > 2");
         //}
+
         gameObject.tag = tag;
+
+        if(gameObject.CompareTag("Tagger") && !timerStarted)
+        {
+            StartCoroutine(Timer());
+            timerStarted = true;
+        }
+        else if(gameObject.tag == "Runner")
+        {
+            //objectRenderer.material = redTagger;
+            HMDTimerText.text = " ";
+            timerStarted = false;
+
+        }
     }
 
     IEnumerator InitiliazePlayer()
@@ -123,7 +137,7 @@ public class TaggingMechanism : MonoBehaviourPunCallbacks
         {
             yield return new WaitForSeconds(1f);
             timeLeft -= 1f;
-            HMDTimerText.text = Mathf.FloorToInt(timeLeft).ToString() + "sec";
+            HMDTimerText.text = Mathf.FloorToInt(timeLeft).ToString() + "secs left";
         }
         if (gameObject.CompareTag("Tagger"))
             {
@@ -189,7 +203,7 @@ public class TaggingMechanism : MonoBehaviourPunCallbacks
         }
         else
         {
-           // StartCoroutine(Timer());
+           StartCoroutine(Timer());
         }
     }
     // void NextLevel()
@@ -231,7 +245,8 @@ public class TaggingMechanism : MonoBehaviourPunCallbacks
     }
     void EndGame()
     {
-        HMDRoleText.text = "Game Over, you lost";
+        HMDRoleText.text = "Game Over, you lost all of pizza!";
+        Time.timeScale = 0;
         SC_RigidbodyWalker rigidbodyWalker = gameObject.GetComponent<SC_RigidbodyWalker>();
         if (rigidbodyWalker != null)
         {

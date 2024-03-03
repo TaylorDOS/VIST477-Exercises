@@ -7,4 +7,9 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("UITest");
     }
+
+    public void MenuPage()
+    {
+        SceneManager.LoadScene("StartGame");
+    }
 }
