@@ -5,11 +5,11 @@ public class ChangeScene : MonoBehaviour
 {
     public void NextScene()
     {
-        SceneManager.LoadScene("UITest");
+        SceneManager.LoadScene("MainGame");
     }
 
     public void MenuPage()
     {
-        SceneManager.LoadScene("StartGame");
+        SceneManager.LoadScene("StarMenu");
     }
 }
